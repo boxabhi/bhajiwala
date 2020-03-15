@@ -76,9 +76,15 @@
                        
                     <p class="text-uppercase">{{$vegetable->vegetable}}</p>
                     </div>
-                    <div class="col-lg-6 col-sm-3 col-xs-3">
-                        <input type="text" value="0" class="form-control" name="data[]">
+                    <div class="col-lg-4 col-sm-3 col-xs-3">
+                        <input type="text" id="{{$vegetable->price}}" value="0" class="form-control" name="data[]">
                     </div>
+
+                    <div class="col-lg-4 col-sm-3 col-xs-3">
+                    <input type="text" data-price="{{$vegetable->id}}" disabled value="0" class="form-control" name="data[]">
+                    </div>
+
+
                 </div>
                 
                 @endforeach

@@ -49,6 +49,11 @@ class VegController extends Controller
         return redirect('/product')->with('success', 'Product saved!');
     }
 
+    public function price($id){
+        $price = vegetable::find($id);
+       
+        return $price->price;
+    }
  
 
     /**

@@ -15,8 +15,10 @@ class BillController extends Controller
     public function index()
     {
         $restraunts = restraunt::all();
-        return view('website.restraunt', compact('restraunts'));   
+        return view('website.bill', compact('restraunts'));   
     }
+
+   
 
     /**
      * Show the form for creating a new resource.
@@ -49,5 +51,13 @@ class BillController extends Controller
     {
         //
     }
+
+
+    public function date(Request $request,$id){
+        $data = restraunt::finc($id);
+         dd($data);
+ 
+ 
+     }
 
 }
